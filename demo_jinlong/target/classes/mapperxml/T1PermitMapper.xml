@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jinlong.mapper.T1PermitMapper">
+ 	<delete id="delT1Permit">
+ 		delete from t1_role_model_fun where r_id = #{roleId} and mf_id = #{i}
+ 	</delete>
+ 	<insert id="addT1Permit">
+ 		insert into t1_role_model_fun (r_id,mf_id)
+ 		 values (#{roleId},#{i})
+ 	</insert>
+</mapper>

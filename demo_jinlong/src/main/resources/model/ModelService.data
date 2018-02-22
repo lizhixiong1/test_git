@@ -1,0 +1,18 @@
+package _package_.service;
+
+import java.util.List;
+
+import _package_.model._simpleName_;
+
+public interface _simpleName_Service {
+
+	void add_simpleName_(_simpleName_ _lowerSimpleName_);
+
+	void update_simpleName_(_simpleName_ _lowerSimpleName_);
+
+	void delete_simpleName_(Integer id);
+
+	List<_simpleName_> get_simpleName_();
+
+	_simpleName_ get_simpleName_ById(Integer id);
+}

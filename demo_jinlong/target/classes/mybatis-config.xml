@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration SYSTEM "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	
+	<settings>
+		<!-- 配置驼峰映射 -->
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+		<setting name="logImpl" value="STDOUT_LOGGING" />
+	</settings>
+	
+	<plugins>
+		<!-- 配置分页拦截器 -->
+		<plugin interceptor="com.github.pagehelper.PageInterceptor">	
+			<!-- 分页支持方法注解拦截 -->	
+			<property name="supportMethodsArguments" value="true" />
+			<!-- 方法注解拦截的参数名称 -->	
+			<property name="params" value="pageNum=page;pageSize=rows;" />
+		</plugin>
+	</plugins>
+</configuration>

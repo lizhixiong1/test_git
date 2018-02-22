@@ -1,0 +1,44 @@
+package _package_.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import _package_.mapper._simpleName_Mapper;
+import _package_.model._simpleName_;
+import _package_.model._simpleName_Example;
+import _package_.service._simpleName_Service;
+
+@Service
+public class _simpleName_ServiceImpl implements _simpleName_Service {
+
+	@Resource
+	private _simpleName_Mapper _lowerSimpleName_Mapper;
+
+	@Override
+	public void add_simpleName_(_simpleName_ _lowerSimpleName_) {
+		_lowerSimpleName_Mapper.insert(_lowerSimpleName_);
+	}
+
+	@Override
+	public void update_simpleName_(_simpleName_ _lowerSimpleName_) {
+		_lowerSimpleName_Mapper.updateByPrimaryKeySelective(_lowerSimpleName_);
+	}
+
+	@Override
+	public void delete_simpleName_(Integer id) {
+		_lowerSimpleName_Mapper.deleteByPrimaryKey(id);
+	}
+
+	@Override
+	public List<_simpleName_> get_simpleName_() {
+		return _lowerSimpleName_Mapper.selectByExample(new _simpleName_Example());
+	}
+
+	@Override
+	public _simpleName_ get_simpleName_ById(Integer id) {
+		return _lowerSimpleName_Mapper.selectByPrimaryKey(id);
+	}
+}

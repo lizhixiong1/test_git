@@ -1,0 +1,48 @@
+package _package_.controller;
+
+import javax.annotation.Resource;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import _package_.model._simpleName_;
+import _package_.service._simpleName_Service;
+
+@RestController
+@RequestMapping("/_lowerSimpleName_")
+public class _simpleName_Controller {
+
+	@Resource
+	private _simpleName_Service _lowerSimpleName_Service;
+
+	@RequestMapping("/get_simpleName_")
+	public String get_simpleName_() {
+		List<_simpleName_> list =  _lowerSimpleName_Service.get_simpleName_();
+		 return "";
+	}
+
+	@RequestMapping("/get_simpleName_ById")
+	public String get_simpleName_ById(String id) {
+		 _simpleName_ _lowerSimpleName_= _lowerSimpleName_Service.get_simpleName_ById(Integer.valueOf(id));
+		 return "";
+	}
+
+	@RequestMapping("/add_simpleName_")
+	public String add_simpleName_(_simpleName_ _lowerSimpleName_) {
+		_lowerSimpleName_Service.add_simpleName_(_lowerSimpleName_);
+		return "";
+	}
+
+	@RequestMapping("/update_simpleName_")
+	public String update_simpleName_(_simpleName_ _lowerSimpleName_) {
+		_lowerSimpleName_Service.update_simpleName_(_lowerSimpleName_);
+		return "";
+	}
+
+	@RequestMapping("/delete_simpleName_")
+	public String delete_simpleName_(String id) {
+		_lowerSimpleName_Service.delete_simpleName_(Integer.valueOf(id));
+		return "";
+	}
+}

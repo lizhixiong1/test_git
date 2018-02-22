@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	
+	<classPathEntry
+		location="D:\maven\apache-maven-3.5.2-bin\apache-maven-3.5.2\jars\mysql-connector-java-5.1.40.jar" />
+
+	<context id="mySql" targetRuntime="MyBatis3">
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/authority" userId="root"
+			password="root">
+		</jdbcConnection>
+
+		<javaModelGenerator targetPackage="com.jinlong.model"
+			targetProject="D:\shixun1\demo_jinlong\src\main\java\">
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.jinlong.mapper"
+			targetProject="D:\shixun1\demo_jinlong\src\main\java\">
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.jinlong.mapper" targetProject="D:\shixun1\demo_jinlong\src\main\java\">
+		</javaClientGenerator>
+		
+		
+		<!-- mapper.xml 中生成的sql -->
+		<table tableName="t1_user" domainObjectName="T1User"
+			enableCountByExample="true" enableDeleteByPrimaryKey="true"
+			enableSelectByExample="true" enableUpdateByExample="true"
+			enableUpdateByPrimaryKey="true">
+		</table>
+		
+		<table tableName="t1_role" domainObjectName="T1Role"
+			enableCountByExample="true" enableDeleteByPrimaryKey="true"
+			enableSelectByExample="true" enableUpdateByExample="true"
+			enableUpdateByPrimaryKey="true">
+		</table>
+		
+		<table tableName="t1_model" domainObjectName="T1Model"
+			enableCountByExample="true" enableDeleteByPrimaryKey="true"
+			enableSelectByExample="true" enableUpdateByExample="true"
+			enableUpdateByPrimaryKey="true">
+		</table>
+		
+		<table tableName="t1_fun" domainObjectName="T1Fun"
+			enableCountByExample="true" enableDeleteByPrimaryKey="true"
+			enableSelectByExample="true" enableUpdateByExample="true"
+			enableUpdateByPrimaryKey="true">
+		</table>
+		
+		<table tableName="j_product" domainObjectName="JProduct"
+			enableCountByExample="true" enableDeleteByPrimaryKey="true"
+			enableSelectByExample="true" enableUpdateByExample="true"
+			enableUpdateByPrimaryKey="true">
+		</table>
+		
+		
+		<table tableName="j_product_set" domainObjectName="JProductSet"
+			enableCountByExample="true" enableDeleteByPrimaryKey="true"
+			enableSelectByExample="true" enableUpdateByExample="true"
+			enableUpdateByPrimaryKey="true">
+		</table>
+	</context>
+</generatorConfiguration>
