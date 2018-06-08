@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.user.dao.UserDao">
+	<select id="getUserList" resultType="User">
+		select * from user
+	</select>
+	
+	<delete id="delUserByIds">
+		delete from user where id in
+		<foreach collection="userIds" item="u"  separator="," open="(" close=")">
+			#{u}
+		</foreach>
+	</delete>
+	
+	<insert id="addUser">
+		insert into user (name,age,birthday,dept) values (
+			#{name},#{age},#{birthday},#{dept}
+		)
+	</insert>
+	<select id="getUserById" resultType="user"> 
+		select * from user where id = #{id}
+	</select>
+	<update id="updateUserById">
+		update user set name = #{name},age = #{age},birthday = #{birthday},dept = #{dept} where id = #{id}
+	</update>
+</mapper>
